@@ -33,6 +33,7 @@ Route::group(['middleware' => 'auth'], function(){
     Route::post('/{user}/follow', 'UsersController@follow');
     Route::post('/{user}/unfollow', 'UsersController@unfollow');
     Route::post('/{user}/dms', 'UsersController@sendPrivateMessage');
+    Route::get('/megusta/{id}', 'MegustaController@like');
 
 
     Route::get('/profile/edit', 'UsersController@profile')->name('profile');

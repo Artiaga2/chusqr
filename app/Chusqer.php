@@ -33,6 +33,11 @@ class Chusqer extends Model
         return $this->belongsToMany(Hashtag::class);
     }
 
+    public function megusta()
+    {
+        return $this->belongsToMany(Megusta::class);
+    }
+
     public function getImageAttribute($image)
     {
         if( starts_with($image, "https://")){
@@ -48,5 +53,7 @@ class Chusqer extends Model
 
         return $this->toArray();
     }
+
+
 
 }

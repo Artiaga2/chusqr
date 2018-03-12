@@ -10,6 +10,7 @@
             <a href="/hashtag/{{ $hashtag->slug }}"><span class="label label-primary">{{ $hashtag->slug }}</span></a>
         @endforeach
     </p>
+
     @if(Auth::user() && Auth::user()->amI())
     <div class="card-section">
         @can('update', $chusqer)
